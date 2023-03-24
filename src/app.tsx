@@ -5,7 +5,7 @@ const App = () => {
     return (
         <Routes>
             <Route
-                path="/"
+                path="/nemarker"
                 element={<h1>Main path page</h1>}
             />
             <Route path="*" element={<h1>Not main path page</h1>}/>

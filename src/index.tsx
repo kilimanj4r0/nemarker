@@ -1,9 +1,14 @@
 import React from 'react';
 import ReactDom from 'react-dom';
+import {BrowserRouter} from 'react-router-dom';
 
 import App from './app';
 
-export default () => <App/>;
+export default () => (
+    <BrowserRouter>
+        <App/>
+    </BrowserRouter>
+);
 
 export const mount = (Сomponent) => {
     ReactDom.render(
@@ -11,8 +16,8 @@ export const mount = (Сomponent) => {
         document.getElementById('app')
     );
 
-    if(module.hot) {
-        module.hot.accept('./app', ()=> {
+    if (module.hot) {
+        module.hot.accept('./app', () => {
             ReactDom.render(
                 <App/>,
                 document.getElementById('app')
