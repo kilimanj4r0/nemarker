@@ -1,18 +1,16 @@
 import React from 'react';
-import {Layout, Menu} from 'antd';
+import {Layout} from 'antd';
 import {FCChildrenProps} from "../types/common";
 import styled from "@emotion/styled";
 import logo from '../assets/logo-small.svg';
 
-const {Content, Header} = Layout;
+const {Content} = Layout;
 
 const StyledLayout = styled(Layout)`
-  background: white;
   height: 100vh;
 `;
 
-const StyledHeader = styled(Header)`
-  background: white;
+const Header = styled.div`
   display: flex;
   align-items: center;
   margin: 24px 16px;
@@ -20,46 +18,48 @@ const StyledHeader = styled(Header)`
   height: 80px;
 `;
 
-const StyledMenu = styled(Menu)`
-  background: aqua;
-`;
-
 const StyledContent = styled(Content)`
   height: 100%;
-  background: coral;
 `;
 
-const StyledLogo = styled.img`
+const Logo = styled.img`
   width: 80px;
 `;
 
+const Menu = styled.div`
+  display: flex;
+  align-items: center;
+  column-gap: 24px;
+`;
+
+
 const MenuItem = styled.div`
-  background: crimson;
+    font-size: 36px;
 `;
 
 const menuItems = [
-    <MenuItem>ai bridge</MenuItem>,
-    <MenuItem>о нас</MenuItem>,
-    <MenuItem>лендинг</MenuItem>,
-].map((item, index) => {
-    return {
-        key: index,
-        label: item,
-    }
-});
+    'ai bridge',
+    'о нас',
+    'лендинг',
+];
+
+const renderMenu = () => {
+    return (
+        <Menu>
+            {menuItems.map((name, index) => (
+                <MenuItem key={index}>{name}</MenuItem>
+            ))}
+        </Menu>
+    )
+}
 
 const PageWrapper: React.FC<FCChildrenProps> = ({children}) => {
     return (
         <StyledLayout>
-            <StyledHeader>
-                <StyledLogo src={logo} alt="AI Bridge logo"/>
-                <StyledMenu
-                    theme="light"
-                    mode="horizontal"
-                    defaultSelectedKeys={['1']}
-                    items={menuItems}
-                />
-            </StyledHeader>
+            <Header>
+                <Logo src={logo} alt="AI Bridge logo"/>
+                {renderMenu()}
+            </Header>
             <StyledContent>
                 {children}
             </StyledContent>
