@@ -35,6 +35,7 @@
         "react-dom": "^18.2.0",
         "react-router": "^6.9.0",
         "react-router-dom": "^6.9.0",
+        "react-textarea-autosize": "^8.4.1",
         "typescript": "^4.9.5"
     }
 }

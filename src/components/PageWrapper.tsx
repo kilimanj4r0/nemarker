@@ -2,6 +2,7 @@ import React from 'react';
 import {Layout} from 'antd';
 import {FCChildrenProps} from "../types/common";
 import styled from "@emotion/styled";
+// @ts-ignore
 import logo from '../assets/logo-small.svg';
 
 const {Content} = Layout;
@@ -20,6 +21,7 @@ const Header = styled.div`
 
 const StyledContent = styled(Content)`
   height: 100%;
+  background: #FEFAFF;
 `;
 
 const Logo = styled.img`

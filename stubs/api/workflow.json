@@ -1,0 +1,26 @@
+{
+  "flows": {
+    "registration": {
+      "init_state": "state_1",
+      "states": {
+        "state_1": {
+          "events": {
+            "next": "state_2"
+          }
+        },
+        "state_2":{
+          "events": {
+            "back": "state_1",
+            "next": "state_3"
+          }
+        },
+        "state_3": {
+          "events": {
+            "back": "state_2",
+            "next": "state_1"
+          }
+        }
+      }
+    }
+  }
+}

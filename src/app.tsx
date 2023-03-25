@@ -1,7 +1,7 @@
 import React from 'react';
-import {Input, TextArea} from "./components/form/styled";
 import {Route, Routes} from "react-router";
 import MainPage from "./pages/main";
+import AboutPage from "./pages/about";
 
 const App = () => {
     return (
@@ -9,6 +9,10 @@ const App = () => {
             <Route
                 path="/nemarker"
                 element={<MainPage />}
+            />
+            <Route
+                path="/nemarker/about"
+                element={<AboutPage />}
             />
         </Routes>
     )
