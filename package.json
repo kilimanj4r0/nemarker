@@ -1,6 +1,6 @@
 {
     "name": "nemarker",
-    "version": "1.0.0",
+    "version": "0.0.1",
     "description": "Enterprise programming on Javascript Advanced Course project",
     "main": "./src/index.tsx",
     "scripts": {
