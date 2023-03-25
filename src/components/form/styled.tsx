@@ -12,18 +12,18 @@ const inputStyles = css`
   font-weight: 400;
   font-size: 24px;
   padding: 10px;
-`
+`;
 
 export const Input = styled.input`
     ${inputStyles};
     height: 50px;
-`
+`;
 
 export const TextArea = styled(TextareaAutosize)`
     ${inputStyles};
     max-height: 500px;
     resize:none;
-`
+`;
 
 export const Form = styled.div`
     display: flex;
@@ -32,7 +32,7 @@ export const Form = styled.div`
     justify-content: center;
     gap: 40px;
     height: 100%;
-`
+`;
 
 export const Button = styled.div`
   background: #FC5130;
@@ -45,4 +45,4 @@ export const Button = styled.div`
 
   /* white */
   color: #FFFFFF;
-`
+`;

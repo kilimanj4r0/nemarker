@@ -1,20 +1,33 @@
 import React from 'react';
 import {Route, Routes} from "react-router";
-import MainPage from "./pages/main";
-import AboutPage from "./pages/about";
+import Main from "./pages/Main";
+import About from "./pages/About";
+import Landing from "./pages/Landing";
+import Page from "./components/Page/Page";
+import {Global} from "@emotion/react";
+import {globalStyles} from "./globalStyles";
 
 const App = () => {
     return (
-        <Routes>
-            <Route
-                path="/nemarker"
-                element={<MainPage />}
+        <Page>
+            <Global
+                styles={globalStyles}
             />
-            <Route
-                path="/nemarker/about"
-                element={<AboutPage />}
-            />
-        </Routes>
+            <Routes>
+                <Route
+                    path="/nemarker"
+                    element={<Main/>}
+                />
+                <Route
+                    path="/nemarker/about"
+                    element={<About/>}
+                />
+                <Route
+                    path="/nemarker/landing"
+                    element={<Landing/>}
+                />
+            </Routes>
+        </Page>
     )
 }
 

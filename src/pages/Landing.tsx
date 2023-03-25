@@ -3,13 +3,13 @@ import React from 'react';
 
 const Background = styled.div`
     height: 100%;
-    background: #FEFAFF;
+    background-color: #fefaff;
 `;
 
-const LandingPage: React.FC = () => {
+const Landing: React.FC = () => {
     return <Background>
 
     </Background>
 }
 
-export default LandingPage;
+export default Landing;
