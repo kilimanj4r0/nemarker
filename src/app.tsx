@@ -1,18 +1,18 @@
 import React from 'react';
+import {Input, TextArea} from "./components/form/styled";
 import {Route, Routes} from "react-router";
-import PageWrapper from "./components/PageWrapper";
+import MainPage from "./pages/main";
 
 const App = () => {
     return (
         <Routes>
             <Route
                 path="/nemarker"
-                element={<PageWrapper><h1>Main path page</h1></PageWrapper>}
+                element={<MainPage />}
             />
-            <Route path="*" element={<h1>Not main path page</h1>}/>
         </Routes>
-    );
-};
+    )
+}
 
 export default App;
 
