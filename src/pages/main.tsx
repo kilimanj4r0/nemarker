@@ -1,15 +1,15 @@
 import React from "react";
 import PageWrapper from "../components/PageWrapper";
-import {Input, TextArea} from "../components/form/styled";
+import {Button, Form, Input, TextArea} from "../components/form/styled";
 
 const MainPage: React.FC = () => {
     return (
         <PageWrapper>
-            <div>
-                <Input placeholder="что сделать?"></Input>
-                <br /><br /><br />
+            <Form>
+                <Input placeholder="что сделать?" />
                 <TextArea placeholder="с каким текстом?" />
-            </div>
+                <Button>запустить</Button>
+            </Form>
         </PageWrapper>
     )
 }
