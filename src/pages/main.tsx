@@ -1,11 +1,11 @@
 import React from "react";
-import PageWrapper from "../components/PageWrapper";
+import Page from "../components/Page/Page";
 
 const MainPage: React.FC = () => {
     return (
-        <PageWrapper>
+        <Page>
             <h1>Main path page</h1>
-        </PageWrapper>
+        </Page>
     )
 }
 

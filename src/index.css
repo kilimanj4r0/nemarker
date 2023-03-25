@@ -1,8 +1,8 @@
 @font-face {
     font-family: 'GolosTextWebVF';
     src:
-        url('src/assets/font/golos-text_vf.woff2') format('woff2'),
-        url('src/assets/font/golos-text_vf.woff') format('woff');
+        url('remote-assets/font/golos-text_vf.woff2') format('woff2'),
+        url('remote-assets/font/golos-text_vf.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
