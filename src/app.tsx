@@ -2,10 +2,10 @@ import React from 'react';
 import {Route, Routes} from "react-router";
 import Main from "./pages/Main/Main";
 import About from "./pages/About/About";
-import Landing from "./pages/Landing/Landing";
 import Page from "./components/Page/Page";
 import {Global} from "@emotion/react";
 import {globalStyles} from "./globalStyles";
+import Landing from "./pages/Landing";
 
 const App = () => {
     return (
@@ -23,10 +23,10 @@ const App = () => {
                         path="/nemarker/about"
                         element={<About/>}
                     />
-                    {/*<Route*/}
-                    {/*    path="/nemarker/landing"*/}
-                    {/*    element={<Landing/>}*/}
-                    {/*/>*/}
+                    <Route
+                        path="/nemarker/landing"
+                        element={<Landing/>}
+                    />
                 </Routes>
             </Page>
         </>

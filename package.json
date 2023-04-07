@@ -25,6 +25,7 @@
         "@ijl/cli": "^4.1.6"
     },
     "dependencies": {
+        "@emotion/css": "^11.10.6",
         "@emotion/react": "^11.10.6",
         "@emotion/styled": "^11.10.6",
         "@types/react": "^18.0.28",
