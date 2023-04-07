@@ -1,5 +1,5 @@
 import React from "react";
-import {Button, Form, Input, TextArea} from "../components/form/styled";
+import {Button, Form, Input, TextArea} from "../../components/Form/styled";
 
 const Main: React.FC = () => {
     return (
@@ -8,7 +8,7 @@ const Main: React.FC = () => {
             <TextArea placeholder="с каким текстом?"/>
             <Button>запустить</Button>
         </Form>
-    )
+    );
 }
 
 export default Main;

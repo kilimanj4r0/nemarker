@@ -1,6 +1,6 @@
 import React from "react";
-import {Container, Description, Profile, ProfilePhoto} from "../components/about/styled";
-import mock from 'src/remote-assets/logo-small.svg';
+import {Container, Description, Profile, ProfilePhoto} from "./styled";
+import mock from 'remote-assets/logo-small.svg';
 
 const About: React.FC = () => {
     return (

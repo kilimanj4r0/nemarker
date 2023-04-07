@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {FCChildrenProps} from "../../typings/common";
 import {Logo, Menu, MenuItem, Wrapper} from "./styled";
-import logo from 'src/remote-assets/logo-small.svg';
+import logo from 'remote-assets/logo-small.svg';
 import {useNavigate} from "react-router-dom";
 
 const BASE_ROUTE = '/nemarker'
@@ -27,7 +27,12 @@ const Header: React.FC<FCChildrenProps> = () => {
     const menuItemOnClick = (index: number, route: string) => {
         setChosenItem(index);
         navigate(route);
+        window.sessionStorage.setItem("chosenItem", String(index)); // store for refresh
     };
+
+    useEffect(() => {
+        setChosenItem(JSON.parse(window.sessionStorage.getItem("chosenItem"))); // load last chosenItem from storage
+    }, []);
 
     const renderMenu = () => {
         return (

@@ -3,13 +3,12 @@ import styled from "@emotion/styled";
 export const Wrapper = styled.div`
   display: flex;
   align-items: center;
-  margin: 24px 16px;
-  padding: 0;
-  height: 80px;
+  padding: 24px 16px;
+  height: var(--size-header-height);
 `;
 
 export const Logo = styled.img`
-  width: 80px;
+  width: var(--size-header-height);
 `;
 
 export const Menu = styled.div`
@@ -19,8 +18,8 @@ export const Menu = styled.div`
 `;
 
 
-export const MenuItem = styled.div<{chosen: boolean}>`
+export const MenuItem = styled.div<{ chosen: boolean }>`
   cursor: pointer;
   font-size: 36px;
-  color: ${({chosen}) => chosen ? '#fc5130' : '#303036'};
+  color: ${({chosen}) => chosen ? 'var(--color-red-accent)' : 'var(--color-dark)'};
 `;

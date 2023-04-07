@@ -3,9 +3,9 @@ import {FCChildrenProps} from "../../typings/common";
 import Header from "../Header/Header";
 import {Content, Layout} from "./styled";
 
-const Page: React.FC<FCChildrenProps> = ({children}) => {
+const Page: React.FC<FCChildrenProps & { id: string }> = ({children, id}) => {
     return (
-        <Layout>
+        <Layout id={id}>
             <Header/>
             <Content>
                 {children}
