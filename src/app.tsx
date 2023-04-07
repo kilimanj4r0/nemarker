@@ -23,10 +23,10 @@ const App = () => {
                         path="/nemarker/about"
                         element={<About/>}
                     />
-                    <Route
-                        path="/nemarker/landing"
-                        element={<Landing/>}
-                    />
+                    {/*<Route*/}
+                    {/*    path="/nemarker/landing"*/}
+                    {/*    element={<Landing/>}*/}
+                    {/*/>*/}
                 </Routes>
             </Page>
         </>
