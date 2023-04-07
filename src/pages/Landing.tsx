@@ -34,7 +34,7 @@ function useWindowSize(): Size {
 const Background = styled.div`
     height: 100vh;
     background: #FEFAFF;
-    overflow: show;
+    overflow: visible;
     position: relative;
 `;
 const LargeTitle = styled.h1`
@@ -113,8 +113,7 @@ const Row = styled.div<ContainerAlignment>`
     justify-content: ${props => props.justify};
 `;
 
-
-const LandingPage: React.FC = () => {
+const Landing: React.FC = () => {
     const LandingTitles = () => <TitlesContainer>
         <Title>опен эйай без випиена юзай</Title>
         <LargeTitle>ai bridge</LargeTitle>
@@ -160,4 +159,4 @@ const LandingPage: React.FC = () => {
     </Background >
 }
 
-export default LandingPage;
+export default Landing;

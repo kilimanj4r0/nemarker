@@ -2,9 +2,16 @@ const pkg = require('./package')
 
 module.exports = {
     apiPath: 'stubs/api',
+    pageTitle: 'AI Bridge',
     webpackConfig: {
         output: {
             publicPath: `/static/${pkg.name}/${process.env.VERSION || pkg.version}/`
+        },
+        module: {
+            rules: [{
+                test: /\.(otf|eot|ttf|woff|woff2)$/i,
+                type: 'asset/resource',
+            }]
         }
     },
     navigations: {
@@ -16,6 +23,6 @@ module.exports = {
         },
     },
     config: {
-        key: 'value'
+
     }
 }
