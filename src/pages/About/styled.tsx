@@ -1,36 +1,46 @@
 import styled from "@emotion/styled";
 
-export const Container = styled.div`
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(3, 1fr);
-    margin: 0 30px;
-    align-content: center;
-    justify-content: flex-start;
-    align-items: normal;
+export const Wrapper = styled.div`
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 16px 96px;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: normal;
 
-    font-weight: 530;
-    font-size: 32px;
-`
+  font-weight: 530;
+  font-size: 32px;
+`;
+
+export const Block = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  
+  span {
+    color: var(--color-red-accent);
+    display: inline !important; // TODO: Fix still doesnt inlined
+  }
+`;
 
 export const Profile = styled.div`
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    text-align: center;
-    gap: 8px;
-    height: 80px;
-`
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  font-size: 36px;
+`;
 
 export const ProfilePhoto = styled.img`
-    width: 80px;
-    height: 80px;
-    border-radius: 80px;
-`
+  width: 80px;
+  height: 80px;
+  border-radius: 80px;
+`;
 
 export const Description = styled.div`
-    font-size: 20px;
-    font-weight: 400;
-    //width: 530px;
-    //height: 50px;
-`
+  font-size: 20px;
+  font-weight: 400;
+`;

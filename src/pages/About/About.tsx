@@ -1,54 +1,59 @@
 import React from "react";
-import {Container, Description, Profile, ProfilePhoto} from "./styled";
+import {Block, Description, Profile, ProfilePhoto, Wrapper} from "./styled";
 import mock from 'remote-assets/logo-small.svg';
+
+type TeamType = {
+    photoSrc: string;
+    name: string;
+    description: string;
+};
+
+const team: TeamType[] = [
+    {
+        photoSrc: mock,
+        name: 'Имя Фамилия',
+        description: 'Lorem ipsum dolor sit amet consectetur. Cras eu orci et adipiscing cursus.'
+    },
+    {
+        photoSrc: mock,
+        name: 'Имя Фамилия',
+        description: 'Lorem ipsum dolor sit amet consectetur. Cras eu orci et adipiscing cursus.'
+    },
+    {
+        photoSrc: mock,
+        name: 'Имя Фамилия',
+        description: 'Lorem ipsum dolor sit amet consectetur. Cras eu orci et adipiscing cursus.'
+    },
+    {
+        photoSrc: mock,
+        name: 'Имя Фамилия',
+        description: 'Lorem ipsum dolor sit amet consectetur. Cras eu orci et adipiscing cursus.'
+    },
+];
+
+const renderTeam = () => {
+    return team.map(({photoSrc, name, description}, index) =>
+        <>
+            <Block>
+                <Profile>
+                    <ProfilePhoto src={photoSrc} alt={name}/>
+                    {name}
+                </Profile>
+                <Description>{description}</Description>
+            </Block>
+            {index === 1 && <Block/>}
+        </>
+    )
+}
 
 const About: React.FC = () => {
     return (
-        <Container>
-            <div className="box-1">
-                <span style={{color: `#fc5130`}}>ai bridge</span> — это сервис с использованием ИИ для сетевого
-                онанизма.
-            </div>
-
-            <div className="box-2">
-                <Profile>
-                    <ProfilePhoto src={mock} alt="pokemon-one"/>
-                    Имя Фамилия
-                </Profile>
-                <Description>
-                    Lorem ipsum dolor sit amet consectetur. Cras eu orci et adipiscing cursus.
-                </Description>
-            </div>
-            <div className="box-4">
-                <Profile>
-                    <ProfilePhoto src={mock} alt="pokemon-one"/>
-                    Имя Фамилия
-                </Profile>
-                <Description>
-                    Lorem ipsum dolor sit amet consectetur. Cras eu orci et adipiscing cursus.
-                </Description>
-            </div>
-            <div className="box-4">
-            </div>
-            <div className="box-4">
-                <Profile>
-                    <ProfilePhoto src={mock} alt="pokemon-one"/>
-                    Имя Фамилия
-                </Profile>
-                <Description>
-                    Lorem ipsum dolor sit amet consectetur. Cras eu orci et adipiscing cursus.
-                </Description>
-            </div>
-            <div className="box-4">
-                <Profile>
-                    <ProfilePhoto src={mock} alt="pokemon-one"/>
-                    Имя Фамилия
-                </Profile>
-                <Description>
-                    Lorem ipsum dolor sit amet consectetur. Cras eu orci et adipiscing cursus.
-                </Description>
-            </div>
-        </Container>
+        <Wrapper>
+            <Block>
+                <span>ai bridge</span> — это сервис с использованием ИИ для сетевого онанизма.
+            </Block>
+            {renderTeam()}
+        </Wrapper>
     );
 };
 
