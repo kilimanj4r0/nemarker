@@ -11,6 +11,7 @@ export default () => (
 );
 
 export const mount = (Сomponent) => {
+    document.title = 'AI Bridge';
     ReactDom.render(
         <Сomponent/>,
         document.getElementById('app')
