@@ -8,6 +8,7 @@ const inputStyles = css`
   border: 2px solid var(--color-dark);
   box-sizing: border-box;
 
+  font-family: 'GolosTextWebVF', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -25,7 +26,7 @@ export const TextArea = styled(TextareaAutosize)`
   resize: none;
 `;
 
-export const Form = styled.div`
+export const Form = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,7 +35,7 @@ export const Form = styled.div`
   height: 100%;
 `;
 
-export const Button = styled.div`
+export const Button = styled.button`
   background: var(--color-red-accent);
   padding: 9px 16px 12px;
   font-weight: 700;
@@ -42,4 +43,9 @@ export const Button = styled.div`
   line-height: 29px; /* identical to box height */
   text-align: center;
   color: var(--color-white);
+  border: none;
+  
+  &:hover {
+    cursor: pointer;
+  }
 `;
