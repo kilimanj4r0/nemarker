@@ -1,5 +1,6 @@
 import React from 'react';
-import ReactDom from 'react-dom';
+import ReactDOM from 'react-dom/client';
+import ReactDom from "react-dom";
 import {BrowserRouter} from 'react-router-dom';
 import App from './app';
 import './globalStyles';
@@ -10,18 +11,13 @@ export default () => (
     </BrowserRouter>
 );
 
-export const mount = (Сomponent) => {
-    ReactDom.render(
-        <Сomponent/>,
-        document.getElementById('app')
-    );
+export const mount = (Component, element = document.getElementById('app')) => {
+    const root = ReactDOM.createRoot(element);
+    root.render(<Component/>);
 
-    if (module.hot) {
-        module.hot.accept('./app', () => {
-            ReactDom.render(
-                <App/>,
-                document.getElementById('app')
-            );
+    if(module.hot) {
+        module.hot.accept('./app', ()=> {
+            root.render(<Component/>);
         })
     }
 };
