@@ -5,7 +5,7 @@ import About from "./pages/About/About";
 import Page from "./components/Page/Page";
 import {Global} from "@emotion/react";
 import {globalStyles} from "./globalStyles";
-import Landing from "./pages/Landing";
+import Landing from "./pages/Landing/Landing";
 
 const App = () => {
     return (

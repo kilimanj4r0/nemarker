@@ -31,7 +31,8 @@ const Header: React.FC<FCChildrenProps> = () => {
     };
 
     useEffect(() => {
-        setChosenItem(JSON.parse(window.sessionStorage.getItem("chosenItem"))); // load last chosenItem from storage
+        const storageChosenItem = JSON.parse(window.sessionStorage.getItem("chosenItem"));
+        setChosenItem(storageChosenItem ? storageChosenItem : 0); // load last chosenItem from storage
     }, []);
 
     const renderMenu = () => {
