@@ -1,6 +1,6 @@
 import React from "react";
 import {Block, Description, Profile, ProfilePhoto, Wrapper} from "./styled";
-import mock from 'remote-assets/logo-small.svg';
+import mock from '../../assets/logo-small.svg';
 
 type TeamType = {
     photoSrc: string;

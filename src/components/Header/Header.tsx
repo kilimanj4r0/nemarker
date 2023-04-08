@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {FCChildrenProps} from "../../typings/common";
 import {Logo, Menu, MenuItem, Wrapper} from "./styled";
-import logo from 'remote-assets/logo-small.svg';
+import logo from '../../assets/logo-small.svg';
 import {useNavigate} from "react-router-dom";
 
 const BASE_ROUTE = '/nemarker'
