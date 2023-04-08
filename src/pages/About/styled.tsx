@@ -13,15 +13,16 @@ export const Wrapper = styled.div`
   font-size: 32px;
 `;
 
+export const ServiceDescriptionBlock = styled.div`
+  span {
+    color: var(--color-red-accent);
+  }
+`
+
 export const Block = styled.div`
   display: flex;
   flex-direction: column;
   gap: 8px;
-  
-  span {
-    color: var(--color-red-accent);
-    display: inline !important; // TODO: Fix still doesnt inlined
-  }
 `;
 
 export const Profile = styled.div`

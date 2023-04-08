@@ -1,5 +1,5 @@
 import React from "react";
-import {Block, Description, Profile, ProfilePhoto, Wrapper} from "./styled";
+import {Block, Description, Profile, ProfilePhoto, ServiceDescriptionBlock, Wrapper} from "./styled";
 import mock from '../../assets/logo-small.svg';
 
 type TeamType = {
@@ -49,9 +49,9 @@ const renderTeam = () => {
 const About: React.FC = () => {
     return (
         <Wrapper>
-            <Block>
+            <ServiceDescriptionBlock>
                 <span>ai bridge</span> — это сервис с использованием ИИ для сетевого онанизма.
-            </Block>
+            </ServiceDescriptionBlock>
             {renderTeam()}
         </Wrapper>
     );
