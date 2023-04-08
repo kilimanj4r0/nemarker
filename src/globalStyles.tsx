@@ -1,10 +1,12 @@
 import {css} from "@emotion/react";
 
+// noinspection CssUnknownTarget (fonts)
 export const globalStyles = css`
   @font-face {
     font-family: 'GolosTextWebVF';
-    src: url('/remote-assets/font/golos-text_vf.woff2') format('woff2'),
-      url('/remote-assets/font/golos-text_vf.woff') format('woff');
+    
+    src: url('${__webpack_public_path__}remote-assets/font/golos-text_vf.woff2') format('woff2'),
+      url('${__webpack_public_path__}remote-assets/font/golos-text_vf.woff') format('woff');
     font-weight: normal;
     font-style: normal;
   }
