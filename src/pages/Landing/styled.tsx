@@ -53,7 +53,7 @@ export const TitlesContainer = styled.div`
 `;
 
 export type ContainerProps = {
-    width: string,
+    width: string;
     height: string;
 }
 export const AbsoluteObject = styled.div<ContainerProps>`

@@ -64,11 +64,11 @@ const Landing: React.FC = () => {
     }, 0);
 
     return <Background>
-        <AbsoluteObject width={String(useWindowSize().width)} height={String(useWindowSize().height)}>
-            <canvas id="wave" width={useWindowSize().width} height={titleHeight + 400} />
+        <AbsoluteObject width={String(useWindowSize().width - 17)} height={String(useWindowSize().height)}>
+            <canvas id="wave" width={useWindowSize().width - 17} height={titleHeight + 400} />
         </AbsoluteObject>
-        <AbsoluteObject width={String(useWindowSize().width)} height={String(useWindowSize().height)}>
-            <canvas id="river" width={useWindowSize().width} height={useWindowSize().height} />
+        <AbsoluteObject width={String(useWindowSize().width - 17)} height={String(useWindowSize().height)}>
+            <canvas id="river" width={useWindowSize().width - 17} height={useWindowSize().height} />
         </AbsoluteObject>
         <CenteredX width={String(useWindowSize().width)} height="">
             <Column align="center" justify="center">
