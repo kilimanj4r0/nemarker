@@ -15,7 +15,9 @@ module.exports = {
         }
     },
     navigations: {
-        'nemarker.main': '/nemarker'
+        'nemarker.main': '/',
+        'nemarker.about': '/about',
+        'nemarker.landing': '/landing',
     },
     features: {
         'nemarker': {

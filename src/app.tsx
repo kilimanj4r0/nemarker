@@ -1,11 +1,9 @@
 import React from 'react';
-import {Route, Routes} from "react-router";
-import Main from "./pages/Main/Main";
-import About from "./pages/About/About";
-import Page from "./components/Page/Page";
 import {Global} from "@emotion/react";
 import {globalStyles} from "./globalStyles";
-import Landing from "./pages/Landing/Landing";
+import {RouterProvider} from "react-router-dom";
+import router from "./router";
+
 
 const App = () => {
     return (
@@ -13,22 +11,7 @@ const App = () => {
             <Global
                 styles={globalStyles}
             />
-            <Page id="nemarker">
-                <Routes>
-                    <Route
-                        path="/nemarker"
-                        element={<Main/>}
-                    />
-                    <Route
-                        path="/nemarker/about"
-                        element={<About/>}
-                    />
-                    <Route
-                        path="/nemarker/landing"
-                        element={<Landing/>}
-                    />
-                </Routes>
-            </Page>
+            <RouterProvider router={router} />
         </>
     )
 }

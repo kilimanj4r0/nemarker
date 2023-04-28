@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { NavLink } from "react-router-dom";
 
 export const HeaderWrapper = styled.header`
   display: flex;
@@ -27,8 +28,12 @@ export const Token = styled.div`
   font-size: 36px;
 `;
 
-export const MenuItem = styled.div<{ chosen: boolean }>`
-  cursor: pointer;
+export const MenuItem = styled(NavLink)`
   font-size: 36px;
-  color: ${({chosen}) => chosen ? 'var(--color-red-accent)' : 'var(--color-dark)'};
+  text-decoration: none;
+  color: var(--color-dark);
+
+  &.active {
+    color: var(--color-red-accent);
+  }
 `;

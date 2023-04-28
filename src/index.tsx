@@ -7,16 +7,14 @@ import './globalStyles';
 import {Favicon} from "./components/Favicon";
 
 export default () => (
-    <BrowserRouter>
-        <App/>
-    </BrowserRouter>
+    <App/>
 );
 
 export const mount = (Component, element = document.getElementById('app')) => {
     document.title = 'AI Bridge';
     const root = ReactDOM.createRoot(element);
     root.render(<Component/>);
-    ReactDom.render(<Favicon/>, document.head);
+    // ReactDom.render(<Favicon/>, document.head);
 
     if(module.hot) {
         module.hot.accept('./app', ()=> {
