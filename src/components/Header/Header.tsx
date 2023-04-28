@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import {FCChildrenProps} from "../../typings/common";
-import {Logo, Menu, MenuItem, Wrapper} from "./styled";
+import {HeaderWrapper, Logo, Menu, MenuItem, Token, LogoAndMenu} from "./styled";
 import logo from '../../assets/logo-small.svg';
 import {useNavigate} from "react-router-dom";
+import {tokenCookie} from "../../connections/cookies/token";
 
 const BASE_ROUTE = '/nemarker'
 
@@ -21,9 +22,15 @@ const menuItems = [
     },
 ];
 
+const mask = (str: string, mask: string, startLength: number, endLen: number) => {
+    return str.slice(0, startLength) + mask + str.slice(str.length - endLen, str.length);
+}
+
 const Header: React.FC<FCChildrenProps> = () => {
     const [chosenItem, setChosenItem] = useState<number>(0);
     const navigate = useNavigate();
+    const {token} = tokenCookie();
+
     const menuItemOnClick = (index: number, route: string) => {
         setChosenItem(index);
         navigate(route);
@@ -49,10 +56,13 @@ const Header: React.FC<FCChildrenProps> = () => {
     };
 
     return (
-        <Wrapper>
-            <Logo src={logo} alt="AI Bridge logo"/>
-            {renderMenu()}
-        </Wrapper>
+        <HeaderWrapper>
+            <LogoAndMenu>
+                <Logo src={logo} alt="AI Bridge logo"/>
+                {renderMenu()}
+            </LogoAndMenu>
+            <Token>{token && mask(token, '...', 3, 4)}</Token>
+        </HeaderWrapper>
     );
 };
 

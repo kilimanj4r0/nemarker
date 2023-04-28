@@ -1,13 +1,15 @@
 import axios from 'axios';
 import {FromOpenAIMessage} from "./typings";
-import {getConfigValue} from "@ijl/cli";
+import Cookies from 'universal-cookie';
+import {TOKEN_COOKIE_NAME} from "../cookies/token";
+
+const cookies = new Cookies();
 
 // TODO get url and token from config
 const axiosInstance = axios.create({
     baseURL: "https://openai.batalov.me/v1",
     withCredentials: true,
     headers: {
-        Authorization: `Bearer ${getConfigValue("nemarker.token")}`,
         "Content-Type": "application/json"
     },
 });
@@ -22,6 +24,10 @@ const API = {
                 content,
             }],
             temperature: 0.7,
+        }, {
+            headers: {
+                Authorization: `Bearer ${cookies.get(TOKEN_COOKIE_NAME)}`,
+            }
         });
     }
 }

@@ -26,7 +26,7 @@ export const TextArea = styled(TextareaAutosize)`
   resize: none;
 `;
 
-export const Form = styled.form`
+export const FormWrapper = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
