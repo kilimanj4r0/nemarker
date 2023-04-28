@@ -18,6 +18,11 @@ import {
     SizedBox,
     HV1Container
 } from "./styled";
+import {useNavigate} from "react-router-dom";
+import stickers from '../../assets/images/stickers.svg';
+import pipeline from '../../assets/images/pipeline.svg';
+import textInput from '../../assets/images/text-input.svg';
+import result from '../../assets/images/result.svg';
 
 // Define general type for useWindowSize hook, which includes width and height
 interface Size {
@@ -54,6 +59,7 @@ const LandingTitles = () => <TitlesContainer>
 const Landing: React.FC = () => {
     const [titleHeight, setTitleHeight] = useState(0);
     const landingTitlesRef = useRef(null);
+    const navigate = useNavigate();
     useEffect(() => {
         if (landingTitlesRef.current != null) {
             setTitleHeight(landingTitlesRef.current.clientHeight)
@@ -80,9 +86,7 @@ const Landing: React.FC = () => {
                     </Column>
                     <Column align="start" justify="center">
                         <div className={css`rotate: 110deg`}><Arrow /></div>
-                        {/* <PleasedYou /> */}
                         <div className={css`margin-left: 150px`}><PleasedYou /></div>
-
                     </Column>
                 </Row>
             </Column>
@@ -94,7 +98,7 @@ const Landing: React.FC = () => {
         <SizedBox width='1' height={String(useWindowSize().height) + 'px'} />
 
         <HV1Container><div className={css`padding-top: 80px; padding-bottom: 80px; padding-right: 80px;`}><Row align="start" justify="space-between">
-            <img src={require("../../assets/images/p2.png")} height={String(useWindowSize().height * 0.5)} />
+            <img src={stickers} alt="Шаблоны-стикеры"  height={String(useWindowSize().height * 0.5)} />
             <LargeTitle align="end" color="#303035">выберите шаблон</LargeTitle>
         </Row></div></HV1Container>
 
@@ -102,21 +106,21 @@ const Landing: React.FC = () => {
         <HV1Container><div className={css`padding: 80px`}><Column justify="start" align="stretch">
             <LargeTitle align="end" color="#303035">соберите сложный запрос</LargeTitle>
             <SizedBox width="0" height="80px" />
-            <Row justify="center" align="center"><img src={require("../../assets/images/p3.png")} height={String(useWindowSize().height * 0.5 / 3.8)} /></Row>
+            <Row justify="center" align="center"><img src={pipeline} alt="Сборка запроса" height={String(useWindowSize().height * 0.5 / 3.8)} /></Row>
         </Column></div></HV1Container>
 
         <HV1Container><div className={css`padding: 80px`}><Column justify="start" align="stretch">
             <LargeTitle align="end" color="#303035">вставьте текст</LargeTitle>
             <SizedBox width="0" height="80px" />
-            <Row justify="center" align="center"><img src={require("../../assets/images/p4.png")} height={String(useWindowSize().height * 0.5 / 1.88)} /></Row>
+            <Row justify="center" align="center"><img src={textInput} alt="Пример ввода" height={String(useWindowSize().height * 0.5 / 1.88)} /></Row>
         </Column></div></HV1Container>
 
         <HV1Container><div className={css`padding: 80px`}><Column justify="start" align="stretch">
             <LargeTitle align="end" color="#303035"><div className={css`color: #FC5130`}>ai bridge</div> выведет результат</LargeTitle>
             <SizedBox width="0" height="80px" />
-            <Row justify="center" align="center"><img src={require("../../assets/images/p5.png")} height={String(useWindowSize().height * 0.5 / 3.3)} /></Row>
+            <Row justify="center" align="center"><img src={result} alt="Пример ответа"  height={String(useWindowSize().height * 0.5 / 3.3)} /></Row>
             <SizedBox width="0" height="80px" />
-            <Row justify="center" align="center"><Button>начать писать</Button></Row>
+            <Row justify="center" align="center"><Button onClick={() => navigate('/nemarker')}>начать писать</Button></Row>
         </Column></div></HV1Container>
     </Background>
 }
