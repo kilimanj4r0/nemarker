@@ -49,7 +49,7 @@ const Header: React.FC<FCChildrenProps> = () => {
     };
 
     return (
-        <Wrapper>
+        <Wrapper landing={chosenItem === 2}>
             <Logo src={logo} alt="AI Bridge logo"/>
             {renderMenu()}
         </Wrapper>

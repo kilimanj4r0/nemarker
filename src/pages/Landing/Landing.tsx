@@ -21,8 +21,8 @@ import {
 
 // Define general type for useWindowSize hook, which includes width and height
 interface Size {
-    width: number | undefined;
-    height: number | undefined;
+    width?: number;
+    height?: number;
 }
 
 function useWindowSize(): Size {

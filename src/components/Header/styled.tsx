@@ -1,10 +1,11 @@
 import styled from "@emotion/styled";
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.div<{ landing: boolean }>`
   display: flex;
   align-items: center;
   padding: 24px 16px;
   height: var(--size-header-height);
+  background: ${({landing}) => landing ? 'var(--color-blue-accent)' : 'var(--color-red-superlight)'};
 `;
 
 export const Logo = styled.img`
