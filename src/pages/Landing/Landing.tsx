@@ -120,7 +120,7 @@ const Landing: React.FC = () => {
             <SizedBox width="0" height="80px" />
             <Row justify="center" align="center"><img src={result} alt="Пример ответа"  height={String(useWindowSize().height * 0.5 / 3.3)} /></Row>
             <SizedBox width="0" height="80px" />
-            <Row justify="center" align="center"><Button onClick={() => navigate('/nemarker')}>начать писать</Button></Row>
+            <Row justify="center" align="center"><Button onClick={() => navigate('/')}>начать писать</Button></Row>
         </Column></div></HV1Container>
     </Background>
 }
