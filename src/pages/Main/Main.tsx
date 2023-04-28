@@ -2,6 +2,7 @@ import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import {Button, Form, Input, TextArea} from "../../components/Form/styled";
 import API from "../../api";
+import {Stickers} from "../../components/Stickers/Stickers";
 
 type FormInputs = {
     prompt: string;
@@ -21,13 +22,17 @@ const Main: React.FC = () => {
     };
 
     return (
-        <Form onSubmit={handleSubmit(onSubmit)}>
-            <Input required placeholder="что сделать?" {...register("prompt")} />
-            <TextArea placeholder="с каким текстом?" {...register("text")} />
-            <Button type="submit">запустить</Button>
-            {result && <div style={{maxWidth: 800}}>{result}</div>}
-        </Form>
-    );
+        <>
+            <Stickers />
+            <Form onSubmit={handleSubmit(onSubmit)}>
+                <Input required placeholder="что сделать?" {...register("prompt")} />
+                <TextArea placeholder="с каким текстом?" {...register("text")} />
+                <Button type="submit">запустить</Button>
+                {result && <div style={{maxWidth: 800}}>{result}</div>}
+            </Form>
+        </>
+
+);
 }
 
 export default Main;
