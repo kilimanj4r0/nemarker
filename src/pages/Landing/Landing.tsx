@@ -1,6 +1,6 @@
 import { css } from "@emotion/css";
 import React, { useEffect, useRef, useState } from 'react';
-import plotCanvas from "../../components/landing/river_wave";
+import plotCanvas from "../../components/canvasRiverWave";
 import Arrow from "../../assets/images/arrow";
 import OpenAI from "../../assets/images/openai";
 import PleasedYou from "../../assets/images/pleasedyou";
@@ -33,8 +33,8 @@ function useWindowSize(): Size {
     useEffect(() => {
         function handleResize() {
             setWindowSize({
-                width: window.innerWidth,
-                height: window.innerHeight,
+                width: document.documentElement.clientWidth,
+                height: document.documentElement.clientHeight,
             });
         }
 
@@ -64,11 +64,11 @@ const Landing: React.FC = () => {
     }, 0);
 
     return <Background>
-        <AbsoluteObject width={String(useWindowSize().width - 17)} height={String(useWindowSize().height)}>
-            <canvas id="wave" width={useWindowSize().width - 17} height={titleHeight + 400} />
+        <AbsoluteObject width={String(useWindowSize().width)} height={String(useWindowSize().height)}>
+            <canvas id="wave" width={useWindowSize().width} height={titleHeight + 400} />
         </AbsoluteObject>
-        <AbsoluteObject width={String(useWindowSize().width - 17)} height={String(useWindowSize().height)}>
-            <canvas id="river" width={useWindowSize().width - 17} height={useWindowSize().height} />
+        <AbsoluteObject width={String(useWindowSize().width)} height={String(useWindowSize().height)}>
+            <canvas id="river" width={useWindowSize().width} height={useWindowSize().height} />
         </AbsoluteObject>
         <CenteredX width={String(useWindowSize().width)} height="">
             <Column align="center" justify="center">

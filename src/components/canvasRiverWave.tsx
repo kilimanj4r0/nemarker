@@ -21,7 +21,6 @@ function plotWave() {
     ctx.lineTo(0, height);
     ctx.fillStyle = "#30BCED";
     ctx.fill();
-
 }
 
 function plotRiver() {

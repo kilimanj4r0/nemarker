@@ -1,7 +1,6 @@
 import styled from "@emotion/styled";
 
 export const Background = styled.div`
-    // position: relative;
     background-color: #FEFAFF;
 `;
 
@@ -58,7 +57,7 @@ export type ContainerProps = {
 }
 export const AbsoluteObject = styled.div<ContainerProps>`
     position: absolute;
-    width: ${props => props.width};
+     width: ${props => props.width};
     height: ${props => props.height};
 `;
 
