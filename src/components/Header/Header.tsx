@@ -1,9 +1,10 @@
 import React from 'react';
 import {FCChildrenProps} from "../../typings/common";
-import {HeaderWrapper, Logo, LogoAndMenu, Menu, MenuItem, Token} from "./styled";
+import {Logo, LogoAndMenu, Menu, MenuItem, Token, Wrapper} from "./styled";
 import logo from '../../assets/logo-small.svg';
 import {tokenCookie} from "../../connections/cookies/token";
 import {routes} from "../../router";
+import {useMatch} from "react-router-dom";
 
 const mask = (str: string, mask: string, startLength: number, endLen: number) => {
     return str.slice(0, startLength) + mask + str.slice(str.length - endLen, str.length);
@@ -11,6 +12,9 @@ const mask = (str: string, mask: string, startLength: number, endLen: number) =>
 
 const Header: React.FC<FCChildrenProps> = () => {
     const {token} = tokenCookie();
+    const isLandingRoute = useMatch("/landing");
+
+    console.log(isLandingRoute)
 
     const renderMenu = () => {
         return (
@@ -23,13 +27,13 @@ const Header: React.FC<FCChildrenProps> = () => {
     };
 
     return (
-        <HeaderWrapper>
+        <Wrapper landing={!!isLandingRoute}>
             <LogoAndMenu>
                 <Logo src={logo} alt="AI Bridge logo"/>
                 {renderMenu()}
             </LogoAndMenu>
             <Token>{token && mask(token, '...', 3, 4)}</Token>
-        </HeaderWrapper>
+        </Wrapper>
     );
 };
 

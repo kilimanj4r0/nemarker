@@ -1,12 +1,13 @@
 import styled from "@emotion/styled";
 import { NavLink } from "react-router-dom";
 
-export const HeaderWrapper = styled.header`
+export const Wrapper = styled.div<{ landing: boolean }>`
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 24px 16px;
   height: var(--size-header-height);
+  background: ${({landing}) => landing ? 'var(--color-blue-accent)' : 'var(--color-red-superlight)'};
 `;
 
 export const LogoAndMenu = styled.div`

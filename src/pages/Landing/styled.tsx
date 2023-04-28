@@ -1,29 +1,44 @@
 import styled from "@emotion/styled";
 
 export const Background = styled.div`
-    //position: relative;
+    background-color: #FEFAFF;
 `;
-export const LargeTitle = styled.h1`
+
+export const HV1Container = styled.div`
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
+
+export type TextProps = {
+    color: string;
+    align: string
+}
+export const LargeTitle = styled.h1<TextProps>`
     font-style: normal;
     font-weight: 500;
     font-size: 120px;
     line-height: 110%;
     letter-spacing: -0.03em;
+    text-align: ${props => props.align};
 
     background: none;
-    color: white;
+    color: ${props => props.color};
     margin: 0;
 `;
 
-export const Title = styled.h1`
+export const Title = styled.h1<TextProps>`
     font-style: normal;
     font-weight: 400;
     font-size: 36px;
     line-height: 110%;
     letter-spacing: -0.02em;
+    text-align: ${props => props.align};
 
     background: none;
-    color: white;
+    color: ${props => props.color};
     margin: 0;
 `;
 
@@ -37,12 +52,12 @@ export const TitlesContainer = styled.div`
 `;
 
 export type ContainerProps = {
-    width: string,
+    width: string;
     height: string;
 }
 export const AbsoluteObject = styled.div<ContainerProps>`
     position: absolute;
-    width: ${props => props.width};
+     width: ${props => props.width};
     height: ${props => props.height};
 `;
 
@@ -81,4 +96,9 @@ export const Row = styled.div<ContainerAlignment>`
     flex-direction: row;
     align-items: ${props => props.align};
     justify-content: ${props => props.justify};
+`;
+
+export const SizedBox = styled.div<ContainerProps>`
+    width: ${props => props.width};
+    height: ${props => props.height};
 `;
