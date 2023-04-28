@@ -4,7 +4,8 @@ export const Wrapper = styled.div`
   display: grid;
   gap: 40px;
   grid-template-columns: repeat(3, 1fr);
-  margin: 16px 96px;
+  margin: 0 96px;
+  padding: 16px 0 0;
   align-content: center;
   justify-content: flex-start;
   align-items: normal;

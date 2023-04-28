@@ -2,6 +2,12 @@ import {css} from "@emotion/react";
 
 // noinspection CssUnknownTarget (fonts)
 export const globalStyles = css`
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
   @font-face {
     font-family: 'GolosTextWebVF';
     
@@ -23,6 +29,10 @@ export const globalStyles = css`
     --color-black: #050401;
 
     font-family: 'GolosTextWebVF', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
     background: var(--color-red-superlight) !important;
     color: var(--color-dark);
   }
