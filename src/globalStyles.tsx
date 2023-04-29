@@ -2,13 +2,7 @@ import {css} from "@emotion/react";
 
 // noinspection CssUnknownTarget (fonts)
 export const globalStyles = css`
-  body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  @font-face {
+@font-face {
     font-family: 'GolosTextWebVF';
     
     src: url('${__webpack_public_path__}remote-assets/font/golos-text_vf.woff2') format('woff2'),
