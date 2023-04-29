@@ -18,7 +18,7 @@ const TokenForm: React.FC = () => {
 
     return (
         <FormWrapper onSubmit={handleSubmit(onSubmit)}>
-            <Text>Получи свой токен на <a href="https://platform.openai.com/account/api-keys">платформе OpenAI</a></Text>
+            <Text>Получите свой токен на <a href="https://platform.openai.com/account/api-keys">платформе OpenAI</a></Text>
             <Input required placeholder="введите токен" {...register("token")} />
             <Button type="submit">войти</Button>
         </FormWrapper>
