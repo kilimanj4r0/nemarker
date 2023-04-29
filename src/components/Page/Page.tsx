@@ -5,7 +5,7 @@ import {Content, Layout} from "./styled";
 import {Outlet} from "react-router-dom";
 import {Head} from "../Head";
 
-const Page: React.FC<FCChildrenProps & { id: string }> = ({children, id}) => {
+const Page: React.FC<{ id: string }> = ({id}) => {
     return (
         <Layout id={id}>
             <Head />
