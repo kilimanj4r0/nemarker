@@ -26,7 +26,7 @@ const team: TeamType[] = [
     {
         photoSrc: kamil,
         name: 'Камиль Фоатов',
-        description: 'Дизайнер, стендапер, получатель сетевого онанизма'
+        description: 'Дизайнер, стендапер, лендингист'
     },
     {
         photoSrc: liza,
@@ -54,7 +54,7 @@ const About: React.FC = () => {
     return (
         <Wrapper>
             <ServiceDescriptionBlock>
-                <span>ai bridge</span> — это сервис с использованием ИИ для сетевого онанизма.
+                <span>ai bridge</span> — это сервис с использованием ИИ для здоровья и красоты ваших текстов.
             </ServiceDescriptionBlock>
             {renderTeam()}
         </Wrapper>
