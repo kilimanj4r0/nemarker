@@ -1,8 +1,7 @@
 import styled from "@emotion/styled";
-import TextareaAutosize from "react-textarea-autosize";
 import {css} from "@emotion/react";
 
-const inputStyles = css`
+export const inputStyles = css`
   width: 800px;
   background: var(--color-white);
   border: 2px solid var(--color-dark);
@@ -20,12 +19,6 @@ export const Input = styled.input`
   height: 50px;
 `;
 
-export const TextArea = styled(TextareaAutosize)`
-  ${inputStyles};
-  max-height: 500px;
-  resize: none;
-`;
-
 export const FormWrapper = styled.form`
   display: flex;
   flex-direction: column;
@@ -35,17 +28,3 @@ export const FormWrapper = styled.form`
   height: 100%;
 `;
 
-export const Button = styled.button`
-  background: var(--color-red-accent);
-  padding: 9px 16px 12px;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 29px; /* identical to box height */
-  text-align: center;
-  color: var(--color-white);
-  border: none;
-  
-  &:hover {
-    cursor: pointer;
-  }
-`;
