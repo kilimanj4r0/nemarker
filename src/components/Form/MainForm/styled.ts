@@ -4,7 +4,7 @@ import {inputStyles} from "../styled";
 
 export const TextArea = styled(TextareaAutosize)`
   ${inputStyles};
-  max-height: 500px;
+  max-height: 200px;
   resize: none;
 `;
 
@@ -17,7 +17,7 @@ export const ButtonsWrapper = styled.div`
 
 export const Result = styled.div`
   max-width: 800px;
-  max-height: 300px;
+  max-height: 200px;
   overflow: auto;
   white-space: pre-wrap;
 `;
