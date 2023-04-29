@@ -14,7 +14,6 @@ export const mount = (Component, element = document.getElementById('app')) => {
     document.title = 'AI Bridge';
     const root = ReactDOM.createRoot(element);
     root.render(<Component/>);
-    // ReactDom.render(<Favicon/>, document.head);
 
     if(module.hot) {
         module.hot.accept('./app', ()=> {
