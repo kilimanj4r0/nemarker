@@ -4,7 +4,6 @@ import {css} from "@emotion/react";
 export const globalStyles = css`
 @font-face {
     font-family: 'GolosTextWebVF';
-    
     src: url('${__webpack_public_path__}remote-assets/font/golos-text_vf.woff2') format('woff2'),
       url('${__webpack_public_path__}remote-assets/font/golos-text_vf.woff') format('woff');
     font-weight: normal;

@@ -8,9 +8,7 @@ import router from "./router";
 const App = () => {
     return (
         <>
-            <Global
-                styles={globalStyles}
-            />
+            <Global styles={globalStyles} />
             <RouterProvider router={router} />
         </>
     )
