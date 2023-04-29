@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Fragment} from "react";
 import {Block, Description, Profile, ProfilePhoto, ServiceDescriptionBlock, Wrapper} from "./styled";
 import mock from '../../assets/logo-small.svg';
 import artem from '../../assets/images/photos/artem-batalov.png';
@@ -37,7 +37,7 @@ const team: TeamType[] = [
 
 const renderTeam = () => {
     return team.map(({photoSrc, name, description}, index) =>
-        <>
+        <Fragment key={index}>
             <Block>
                 <Profile>
                     <ProfilePhoto src={photoSrc} alt={name}/>
@@ -45,8 +45,8 @@ const renderTeam = () => {
                 </Profile>
                 <Description>{description}</Description>
             </Block>
-            {index === 1 && <Block/>}
-        </>
+            {index === 1 && <Block />}
+        </Fragment>
     )
 }
 

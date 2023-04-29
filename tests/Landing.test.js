@@ -4,6 +4,12 @@ import { render } from '@testing-library/react';
 import '@testing-library/jest-dom'
 import Landing from '../src/pages/Landing/Landing';
 
+const mockedUsedNavigate = jest.fn();
+jest.mock('react-router-dom', () => ({
+    ...jest.requireActual('react-router-dom'),
+    useNavigate: () => mockedUsedNavigate,
+}));
+
 describe('Main page', () => { 
     // Test whether the Landing page renders correctly
     it('renders correctly', () => {
@@ -14,15 +20,13 @@ describe('Main page', () => {
     // Test whether the Landing page has an 
     // text element with proper contents
     it('has a expected text elements', () => {
-        const { getByText, container } = render(<Landing />);
-        expect(getByText('ai bridge')).toBeInTheDocument();
+        const { getByText, container, getAllByText } = render(<Landing />);
+        expect(getAllByText('ai bridge').length).toBe(2)
         // Match splitted text with
         // custom matcher
         const regex = /Пролив.*Випиеновый/;
         const foundElement = findElementWithTextContent(container, regex);
         expect(foundElement).not.toBeNull();
-  
-        
     });
 
     function findElementWithTextContent(element, regex) {
