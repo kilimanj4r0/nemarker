@@ -19,7 +19,7 @@ const TokenForm = () => {
     return (
         <FormWrapper onSubmit={handleSubmit(onSubmit)}>
             <Input required placeholder="введите токен" {...register("token")} />
-            <Button type="submit">войти</Button>
+            <Button type="submit" onClick={() => {console.log("[eq")}}>войти</Button>
         </FormWrapper>
     );
 };
