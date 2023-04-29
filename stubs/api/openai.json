@@ -1,0 +1,21 @@
+{
+  "id": "chatcmpl-7AUWnkpriOPbCMKKP18zjUtSiXbeX",
+  "object": "chat.completion",
+  "created": 1682734985,
+  "model": "gpt-3.5-turbo-0301",
+  "usage": {
+    "prompt_tokens": 12,
+    "completion_tokens": 29,
+    "total_tokens": 41
+  },
+  "choices": [
+    {
+      "message": {
+        "role": "assistant",
+        "content": "I'm sorry, I do not understand what \"gdsdgs\" means. Can you please provide more context or rephrase your question?"
+      },
+      "finish_reason": "stop",
+      "index": 0
+    }
+  ]
+}

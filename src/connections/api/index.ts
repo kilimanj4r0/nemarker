@@ -2,12 +2,13 @@ import axios from 'axios';
 import {FromOpenAIMessage} from "./typings";
 import Cookies from 'universal-cookie';
 import {TOKEN_COOKIE_NAME} from "../cookies/token";
+import {getConfigValue} from "@ijl/cli";
 
 const cookies = new Cookies();
 
 // TODO get url and token from config
 const axiosInstance = axios.create({
-    baseURL: "https://openai.batalov.me/v1",
+    baseURL: getConfigValue('nemarker.api'),
     withCredentials: true,
     headers: {
         "Content-Type": "application/json"

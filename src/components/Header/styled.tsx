@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { NavLink } from "react-router-dom";
 
-export const Wrapper = styled.div<{ landing: boolean }>`
+export const Wrapper = styled.header<{ landing: boolean }>`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,7 +19,7 @@ export const Logo = styled.img`
   width: var(--size-header-height);
 `;
 
-export const Menu = styled.div`
+export const Menu = styled.nav`
   display: flex;
   align-items: center;
   column-gap: 24px;

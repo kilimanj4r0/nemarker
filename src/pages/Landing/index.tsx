@@ -4,7 +4,6 @@ import plotCanvas from "../../components/canvasRiverWave";
 import Arrow from "../../assets/images/arrow";
 import OpenAI from "../../assets/images/openai";
 import PleasedYou from "../../assets/images/pleasedyou";
-import { Button } from "../../components/Form/styled";
 import {
     AbsoluteObject,
     Background,
@@ -23,6 +22,7 @@ import stickers from '../../assets/images/stickers.svg';
 import pipeline from '../../assets/images/pipeline.svg';
 import textInput from '../../assets/images/text-input.svg';
 import result from '../../assets/images/result.svg';
+import {Button} from "../../components/Button";
 
 // Define general type for useWindowSize hook, which includes width and height
 interface Size {

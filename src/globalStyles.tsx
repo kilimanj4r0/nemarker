@@ -1,5 +1,15 @@
 import {css} from "@emotion/react";
 
+export const colors = {
+    blueAccent: '#30BCED',
+    redAccent: '#FC5130',
+    redLight: '#FFDDD6',
+    redSuperlight: '#FEFAFF',
+    white: '#FFFFFF',
+    dark: '#303035',
+    black: '#050401',
+}
+
 // noinspection CssUnknownTarget (fonts)
 export const globalStyles = css`
 @font-face {
@@ -13,13 +23,13 @@ export const globalStyles = css`
   #nemarker {
     --size-header-height: 80px;
     --size-header-height-padding: 48px;
-    --color-blue-accent: #30BCED;
-    --color-red-accent: #FC5130;
-    --color-red-light: #FFDDD6;
-    --color-red-superlight: #FEFAFF;
-    --color-white: #FFFFFF;
-    --color-dark: #303035;
-    --color-black: #050401;
+    --color-blue-accent: ${colors.blueAccent};
+    --color-red-accent: ${colors.redAccent};
+    --color-red-light: ${colors.redLight};
+    --color-red-superlight: ${colors.redSuperlight};
+    --color-white: ${colors.white};
+    --color-dark: ${colors.dark};
+    --color-black: ${colors.black};
 
     font-family: 'GolosTextWebVF', sans-serif;
     font-style: normal;

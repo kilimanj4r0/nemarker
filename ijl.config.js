@@ -25,6 +25,7 @@ module.exports = {
         },
     },
     config: {
-
+        // 'nemarker.api': "https://openai.batalov.me/v1",
+        'nemarker.api': "/api/v1",
     }
 }

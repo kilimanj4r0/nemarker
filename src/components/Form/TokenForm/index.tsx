@@ -1,13 +1,14 @@
 import React from "react";
 import {SubmitHandler, useForm} from "react-hook-form";
-import {Button, Input, FormWrapper} from "../styled";
+import {Input, FormWrapper} from "../styled";
 import {tokenCookie} from "../../../connections/cookies/token";
+import {Button} from "../../Button";
 
 type FormInputs = {
     token: string;
 }
 
-const TokenForm = () => {
+const TokenForm: React.FC = () => {
     const {register, handleSubmit} = useForm<FormInputs>();
     const {setToken} = tokenCookie();
 
