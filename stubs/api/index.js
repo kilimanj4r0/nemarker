@@ -1,27 +1,14 @@
 const router = require('express').Router();
-const workflow_json = require('./workflow.json')
+const openaiResp = require('./openai.json')
 
 module.exports = router;
 
 
-
-router.get("/workflow", (req, resp) => {
-    const {command, name} = req.query;
-    console.log('session', req.session);
-    let {flow_name, state_name} = req.session.workflow || {};
-    if (command === 'init') {
-        flow_name = name;
-        state_name = workflow_json.flows[flow_name].init_state;
-    }
-    else if (command === 'event') {
-        const event_name = name;
-        state_name = workflow_json.flows[flow_name].states[state_name].events[event_name]
-    }
-    else if (command === 'exit') {
-        flow_name = undefined;
-        state_name = undefined;
-    }
-    req.session.workflow = {flow_name, state_name};
-    console.log('done', flow_name, state_name);
-    resp.send({flow_name, state_name});
+router.post("/v1/chat/completions", (req, resp) => {
+    const token = req.headers.authorization;
+    const {model, temperature, messages} = req.body;
+    const text = messages[0].content;
+    const outMessage = `Token: ${token}, model: ${model}, temperature: ${temperature}, text: ${text}`;
+    openaiResp.choices[0].message.content = outMessage;
+    resp.send(openaiResp);
 })
