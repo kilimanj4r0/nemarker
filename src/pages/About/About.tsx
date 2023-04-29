@@ -11,22 +11,22 @@ type TeamType = {
 const team: TeamType[] = [
     {
         photoSrc: mock,
-        name: 'Имя Фамилия',
+        name: 'Владимир Махарев',
         description: 'Lorem ipsum dolor sit amet consectetur. Cras eu orci et adipiscing cursus.'
     },
     {
         photoSrc: mock,
-        name: 'Имя Фамилия',
+        name: 'Артем Баталов',
         description: 'Lorem ipsum dolor sit amet consectetur. Cras eu orci et adipiscing cursus.'
     },
     {
         photoSrc: mock,
-        name: 'Имя Фамилия',
+        name: 'Камиль Фоатов',
         description: 'Lorem ipsum dolor sit amet consectetur. Cras eu orci et adipiscing cursus.'
     },
     {
         photoSrc: mock,
-        name: 'Имя Фамилия',
+        name: 'Елизавета Семенова',
         description: 'Lorem ipsum dolor sit amet consectetur. Cras eu orci et adipiscing cursus.'
     },
 ];
