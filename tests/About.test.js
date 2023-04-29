@@ -2,7 +2,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom'
-import About from '../pages/About/About';
+import About from '../src/pages/About/About';
 
 describe('About page', () => {
     it('renders correctly', () => {

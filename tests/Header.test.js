@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom'
-import Header from '../components/Header/Header';
+import Header from '../src/components/Header/Header';
 import {BrowserRouter} from 'react-router-dom';
 
 
