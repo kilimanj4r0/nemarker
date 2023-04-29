@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import {css} from "@emotion/react";
+import {colors} from "../../globalStyles";
 
 export const inputStyles = css`
   width: 800px;
@@ -27,5 +28,11 @@ export const FormWrapper = styled.form`
   gap: 40px;
   height: 100%;
   width: 100%;
+`;
+
+export const Text = styled.div`
+  a {
+    color: ${colors.blueAccent};
+  }
 `;
 
