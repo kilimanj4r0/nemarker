@@ -19,4 +19,5 @@ export const Result = styled.div`
   max-width: 800px;
   max-height: 300px;
   overflow: auto;
+  white-space: pre-wrap;
 `;
