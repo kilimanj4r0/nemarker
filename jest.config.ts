@@ -4,6 +4,8 @@
  */
 
 export default {
+      // from the above list
+    // preset: "ts-jest",
   // All imported modules in your tests should be mocked automatically
   // automock: false,
 
@@ -159,9 +161,9 @@ export default {
   // ],
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
-  // testPathIgnorePatterns: [
-  //   "\\\\node_modules\\\\"
-  // ],
+  testPathIgnorePatterns: [
+    "\\\\node_modules\\\\"
+  ],
 
   // The regexp pattern or array of patterns that Jest uses to detect test files
   // testRegex: [],
@@ -192,4 +194,14 @@ export default {
 
   // Whether to use watchman for file crawling
   // watchman: true,
+//   transform: {
+//     '^.+\\.tsx?$': 'ts-jest',
+//   },
+
+  moduleNameMapper: {
+    '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
+      '<rootDir>/__mocks__/fileMock.js',
+    '\\.(css|less)$': '<rootDir>/__mocks__/styleMock.js',
+    '^.+\\.tsx?$': 'babel-jest'
+  },
 };

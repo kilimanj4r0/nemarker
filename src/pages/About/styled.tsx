@@ -31,7 +31,7 @@ export const Profile = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  text-align: center;
+  text-align: left;
   gap: 16px;
   font-size: 36px;
 `;
