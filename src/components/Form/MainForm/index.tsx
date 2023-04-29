@@ -1,21 +1,17 @@
 import React from "react";
-import {SubmitHandler, useForm} from "react-hook-form";
+import {SubmitHandler, useFormContext} from "react-hook-form";
 import API from "../../../connections/api";
 import {Input, FormWrapper} from "../styled";
 import {Button} from "../../Button";
 import {ButtonsWrapper, Result, TextArea} from "./styled";
 import {PropagateLoader} from "react-spinners";
 import {colors} from "../../../globalStyles";
-
-type FormInputs = {
-    prompt: string;
-    text?: string;
-}
+import {FormInputs} from "./types";
 
 const MainForm: React.FC = () => {
     const [result, setResult] = React.useState<string>('');
     const [loading, setLoading] = React.useState<boolean>(false);
-    const {register, handleSubmit, reset} = useForm<FormInputs>();
+    const {register, handleSubmit, reset} = useFormContext();
 
     const onSubmit: SubmitHandler<FormInputs> = (data) => {
         console.log(data);

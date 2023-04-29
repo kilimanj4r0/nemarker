@@ -1,17 +1,16 @@
 import React from "react";
-import MainForm from "../../components/Form/MainForm";
 import TokenForm from "../../components/Form/TokenForm";
 import {tokenCookie} from "../../connections/cookies/token";
+import MainFormWithCards from "../../components/Form/MainFormWithCards";
 
 
 const Main: React.FC = () => {
     const {token} = tokenCookie();
 
-    return (
-        <>
-            {token ? <MainForm /> : <TokenForm />}
-        </>
-    );
+    if (!token) {
+        return <TokenForm/>;
+    }
+    return <MainFormWithCards />
 }
 
 export default Main;

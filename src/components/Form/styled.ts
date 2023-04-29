@@ -26,5 +26,6 @@ export const FormWrapper = styled.form`
   justify-content: center;
   gap: 40px;
   height: 100%;
+  width: 100%;
 `;
 
