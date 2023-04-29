@@ -12,7 +12,7 @@ type FormInputs = {
     text?: string;
 }
 
-const MainForm = () => {
+const MainForm: React.FC = () => {
     const [result, setResult] = React.useState<string>('');
     const [loading, setLoading] = React.useState<boolean>(false);
     const {register, handleSubmit, reset} = useForm<FormInputs>();

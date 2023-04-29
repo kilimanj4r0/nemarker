@@ -8,7 +8,7 @@ type FormInputs = {
     token: string;
 }
 
-const TokenForm = () => {
+const TokenForm: React.FC = () => {
     const {register, handleSubmit} = useForm<FormInputs>();
     const {setToken} = tokenCookie();
 
