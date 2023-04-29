@@ -4,7 +4,7 @@ import { render, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event'
 import '@testing-library/jest-dom'
 import { screen, configure } from '@testing-library/react'
-import Main from '../src/pages/Main/Main';
+import Main from '../src/pages/Main';
 import {act} from "react-dom/test-utils";
 
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom'
-import Page from '../src/components/Page/Page';
+import Page from '../src/components/Page';
 import {BrowserRouter} from 'react-router-dom';
 
 

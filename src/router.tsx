@@ -1,10 +1,10 @@
 import {createBrowserRouter, RouteObject} from "react-router-dom";
 import {getNavigations} from "@ijl/cli";
 import React from "react";
-import Main from "./pages/Main/Main";
-import About from "./pages/About/About";
-import Landing from "./pages/Landing/Landing";
-import Page from "./components/Page/Page";
+import Main from "./pages/Main";
+import About from "./pages/About";
+import Landing from "./pages/Landing";
+import Page from "./components/Page";
 
 const configNavigations = getNavigations();
 

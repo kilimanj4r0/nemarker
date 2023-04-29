@@ -1,6 +1,6 @@
 import React from 'react';
 import {FCChildrenProps} from "../../typings/common";
-import Header from "../Header/Header";
+import Header from "../Header";
 import {Content, Layout} from "./styled";
 import {Outlet} from "react-router-dom";
 import {Head} from "../Head";

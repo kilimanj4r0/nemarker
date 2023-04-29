@@ -2,7 +2,7 @@ import {describe, expect, it} from '@jest/globals';
 import React from 'react';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom'
-import Landing from '../src/pages/Landing/Landing';
+import Landing from '../src/pages/Landing';
 
 const mockedUsedNavigate = jest.fn();
 jest.mock('react-router-dom', () => ({
